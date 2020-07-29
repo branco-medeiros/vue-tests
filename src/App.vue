@@ -1,28 +1,44 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="p-grid p-align-stretch">
+    <div class="p-col p-grid p-align-stretch">
+      <div class="p-col-fixed side-bar center">
+        <img alt="Vue logo" src="./assets/logo.png">
+      </div>
+      <div class="p-col">
+        <router-view ref="view" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  name: 'App'
 }
 </script>
 
 <style>
-#app {
+body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin:0;
+  padding:0;
 }
+
+#app {
+  padding: 1em;
+  min-height:100vh;
+  box-sizing: border-box;
+}
+
+.center {
+  text-align: center;
+}
+
+.side-bar {
+  width: 300px;
+  background-color: darkgray;
+}
+
+
 </style>
