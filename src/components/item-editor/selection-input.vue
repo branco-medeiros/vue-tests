@@ -6,6 +6,9 @@
       :key = "itemId(option)"
       :value = "itemId(option)"
       :label = "itemLabel(option)">
+      <slot :option="option">
+        {{itemLabel(option)}}
+      </slot> 
     </el-option>
   </el-select>
 </template>

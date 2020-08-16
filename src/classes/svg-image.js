@@ -1,5 +1,6 @@
-const svg = {
-  img: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">'
+import svgHsl from "./svg-hsl.js"
+
+export default svgHsl('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">'
     + '<path d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 '
     + '48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-352 96c35.3 0 64 '
     + '28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 '
@@ -8,12 +9,4 @@ const svg = {
     + '57.6v19.2zM512 312c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 '
     + '8-8h144c4.4 0 8 3.6 8 8v16zm0-64c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16c0-4.4 '
     + '3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-64c0 4.4-3.6 8-8 '
-    + '8H360c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16z"/></svg>',
-  
-  hsl(h, s, l){
-    var color = `<path fill="hsl(${Math.floor(h)}, ${Math.floor(s)}%, ${Math.floor(l)}%)" `;
-    return svg.img.replace("<path ", color)
-  }
-}
-
-export default svg;
+    + '8H360c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16z"/></svg>')

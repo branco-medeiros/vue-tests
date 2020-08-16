@@ -41,7 +41,7 @@
 
     mounted: function(){
       this.applyMask()
-      console.log("$maskedInput:", this.$maskedInput) 
+      //console.log("$maskedInput:", this.$maskedInput) 
     },
 
     beforeDestroy: function(){

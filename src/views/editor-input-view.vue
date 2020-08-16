@@ -43,6 +43,10 @@
         <editor-test name="masked-input" :props = "masked" ref="masked" @save="onSave" />
       </li>
 
+      <li>
+        <editor-test name="image-input" :props="image" ref="image" @save="onSave" />
+      </li>
+
     </ul>
     <el-dialog :visible.sync="showResult" title = "Save results">
       {{resultValue}}
@@ -60,6 +64,7 @@ import "../components/item-editor/selection-input.vue"
 import "../components/item-editor/option-input.vue"
 import "../components/item-editor/optionbutton-input.vue"
 import "../components/item-editor/masked-input.vue"
+import "../components/item-editor/image-input.vue"
 import "../components/editor-test.vue"
 
 export default {
@@ -141,6 +146,10 @@ export default {
       masked: {
         mask: "\\(99\\) 9999[9]-9999",
         value: null
+      },
+
+      image: {
+        value: {idImagem: 1075, url: "http://www.tjpa.jus.br/CMSPortal/VisualizarImagem?idImagem=1075", mimeType: "image/jpg"}
       }
     }
   },

@@ -10,6 +10,7 @@ import router from './route'
 import 'element-ui/lib/theme-chalk/index.css';
 //import "bootstrap/dist/css/bootstrap-grid.css";
 import "primeflex/primeflex.css"
+import "@fortawesome/fontawesome-free/css/all.css";
 
 
 Vue.config.productionTip = false
@@ -24,5 +25,10 @@ Vue.directive('mask', {
 window.xApp = new Vue({
   router,
   store,
-  render: h => h(App)
+  render: h => h(App),
+  methods: {
+    getView: function(){
+      return this.$children[0].$refs.view
+    }
+  }
 }).$mount('#app')

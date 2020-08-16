@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="p-grid p-align-stretch">
-    <div class="p-col p-grid p-align-stretch">
+    <div class="p-col p-grid p-align-stretch" style="flex-wrap:nowrap; max-width:100vw">
       <div class="p-col-fixed side-bar center">
         <img alt="Vue logo" src="./assets/logo.png">
       </div>

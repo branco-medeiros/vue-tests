@@ -152,6 +152,7 @@
   import OneOf from "../../classes/one-of.js"
   import svg from "../../classes/svg-question.js"
 
+  const question = svg.hsl(0, 100, 100, 25)
 
   export default Vue.component("image-selector-control", {
     props: {
@@ -175,7 +176,7 @@
       },
 
       noImgSrc: function(){
-        return "data:image/svg+xml;utf-8," + svg.img;
+        return "data:image/svg+xml;utf-8," + question;
       },
 
       imageListClass: function(){
@@ -193,6 +194,10 @@
 
       onSelectImage: function(img){
         this.$emit("update:image", img.id)
+      },
+
+      executeOnThis: function(){
+        return {g:this.groups, i:this.images}
       }
 
     }
